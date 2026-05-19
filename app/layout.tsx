@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description:
       "Smart Tech. Fast Lending. Professional consultancy for business loans and financial solutions.",
 
-    url: "https://your-vercel-domain.vercel.app",
+    url: "https://quickd-fintech.vercel.app/",
 
     siteName: "Quickd Fintech",
 
