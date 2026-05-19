@@ -13,6 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://quickd-fintech.vercel.app"),
+
   title: "Quickd Fintech | Business Loan & Financial Consultancy",
 
   description:
@@ -38,13 +40,13 @@ export const metadata: Metadata = {
     description:
       "Smart Tech. Fast Lending. Professional consultancy for business loans and financial solutions.",
 
-    url: "https://quickd-fintech.vercel.app/",
+    url: "https://quickd-fintech.vercel.app",
 
     siteName: "Quickd Fintech",
 
     images: [
       {
-        url: "/KRUTIKA DODIYA.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
       },
