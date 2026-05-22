@@ -35,7 +35,7 @@ export default function PaymentPage() {
               <p className="text-gray-500 text-sm">Consultation Fees</p>
 
               <h3 className="text-4xl font-extrabold text-[#5B0E74] mt-2">
-                ₹499
+                ₹199
               </h3>
             </div>
 
