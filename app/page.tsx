@@ -15,6 +15,7 @@ const services = [
 ];
 
 export default function Home() {
+  const [showPayment, setShowPayment] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -41,7 +42,7 @@ Requirement: ${formData.message}
     window.open(whatsappUrl, "_blank");
 
     setTimeout(() => {
-      window.location.href = "/payment";
+      // window.location.href = "/payment";
     }, 1500);
   };
 
@@ -380,30 +381,94 @@ Requirement: ${formData.message}
                   return;
                 }
 
-                const text = `
+                setShowPayment(true);
+
+                setTimeout(() => {
+                  document.getElementById("payment-section")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }, 200);
+              }}
+              className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-5 text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
+            >
+              Book Consultation
+            </button>
+          </form>
+
+          {showPayment && (
+            <div
+              id="payment-section"
+              className="mt-10 bg-[#F3E8FF] rounded-3xl p-5 border border-[#D8B4FE]"
+            >
+              <h2 className="text-2xl font-bold text-[#2B0B3A] text-center">
+                Scan & Pay
+              </h2>
+
+              <p className="text-gray-600 text-center mt-3">
+                Complete consultation payment to continue
+              </p>
+
+              {/* QR */}
+              <div className="bg-white rounded-3xl p-5 mt-6 shadow-lg">
+                <img
+                  src="/scanner.png"
+                  alt="Payment QR"
+                  className="w-full max-w-[260px] mx-auto"
+                />
+              </div>
+
+              {/* Amount */}
+              <div className="mt-6 text-center">
+                <p className="text-gray-500 text-sm">Consultation Fees</p>
+
+                <h3 className="text-4xl font-extrabold text-[#5B0E74] mt-2">
+                  ₹199
+                </h3>
+              </div>
+
+              {/* Transaction ID */}
+              <input
+                type="text"
+                placeholder="Enter Transaction ID"
+                id="transactionId"
+                className="w-full mt-6 border border-[#E9D5FF] rounded-2xl p-4 outline-none"
+              />
+
+              {/* Final Button */}
+              <button
+                onClick={() => {
+                  const transactionId = (
+                    document.getElementById("transactionId") as HTMLInputElement
+                  ).value;
+
+                  if (!transactionId) {
+                    alert("Please enter transaction ID");
+                    return;
+                  }
+
+                  const message = `Hello Quickd Fintech,
+
 Name: ${formData.name}
 Email: ${formData.email}
 Mobile: ${formData.mobile}
 Loan Type: ${formData.loanType}
 Amount: ${formData.amount}
 Requirement: ${formData.message}
-      `;
 
-                const whatsappUrl = `https://wa.me/919228143222?text=${encodeURIComponent(
-                  text,
-                )}`;
+Transaction ID: ${transactionId}`;
 
-                window.open(whatsappUrl, "_blank");
+                  const whatsappUrl = `https://wa.me/919228143222?text=${encodeURIComponent(
+                    message,
+                  )}`;
 
-                setTimeout(() => {
-                  window.location.href = "/payment";
-                }, 2000);
-              }}
-              className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-4 md:py-5 text-lg md:text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
-            >
-              Book Consultation
-            </button>
-          </form>
+                  window.open(whatsappUrl, "_blank");
+                }}
+                className="w-full mt-5 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 rounded-full shadow-lg hover:scale-[1.02] transition duration-300"
+              >
+                I've Completed Payment
+              </button>
+            </div>
+          )}
         </section>
 
         {/* Why Choose Us */}
@@ -559,6 +624,7 @@ Requirement: ${formData.message}
             </div>
           </div>
         </section>
+
         {/* Footer */}
         <footer className="mt-24 bg-gradient-to-br from-[#5B0E74] via-[#7E1F86] to-[#2B0B3A] rounded-[35px] p-6 md:p-10 shadow-2xl text-center text-white overflow-hidden relative">
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#F59E0B]/20 rounded-full blur-3xl" />
