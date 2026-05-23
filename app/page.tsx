@@ -389,7 +389,7 @@ Amount: ${formData.amount}
 Requirement: ${formData.message}
       `;
 
-                const whatsappUrl = `https://wa.me/919904143222?text=${encodeURIComponent(
+                const whatsappUrl = `https://wa.me/919228143222?text=${encodeURIComponent(
                   text,
                 )}`;
 
@@ -404,6 +404,124 @@ Requirement: ${formData.message}
               Book Consultation
             </button>
           </form>
+        </section>
+
+        {/* Why Choose Us */}
+        <section className="mt-24">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
+              Why Choose Us
+            </h2>
+
+            <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
+            {/* Card 1 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-3xl p-10 text-center shadow-lg hover:-translate-y-2 transition duration-300">
+              <div className="text-6xl">💼</div>
+
+              <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
+                15+ Years Experience
+              </h3>
+
+              <p className="text-gray-600 leading-8 mt-4">
+                Get the best loan guidance from our experienced financial
+                consultancy team.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-3xl p-10 text-center shadow-lg hover:-translate-y-2 transition duration-300">
+              <div className="text-6xl">⚡</div>
+
+              <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
+                Fast Processing
+              </h3>
+
+              <p className="text-gray-600 leading-8 mt-4">
+                Quick loan approvals with smooth documentation and hassle-free
+                process.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-3xl p-10 text-center shadow-lg hover:-translate-y-2 transition duration-300">
+              <div className="text-6xl">⭐</div>
+
+              <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
+                10000+ Happy Customers
+              </h3>
+
+              <p className="text-gray-600 leading-8 mt-4">
+                Trusted by thousands of customers for loan consultancy and
+                financial support.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-3xl p-10 text-center shadow-lg hover:-translate-y-2 transition duration-300">
+              <div className="text-6xl">🤝</div>
+
+              <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
+                Transparency & Trust
+              </h3>
+
+              <p className="text-gray-600 leading-8 mt-4">
+                We believe in ethical consultancy with complete transparency and
+                client satisfaction.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Customer Reviews */}
+        <section className="mt-24">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
+              Satisfied Clients Reviews
+            </h2>
+
+            <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
+          </div>
+
+          <div className="flex flex-col gap-8 mt-14">
+            {/* Review 1 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-[30px] p-8 shadow-xl">
+              <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
+
+              <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
+                Excellent support for my Business Loan process. Team was very
+                professional and transparent.
+              </p>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-[#1E1B4B]">
+                  Rahul Mehta
+                </h3>
+
+                <p className="text-gray-500 mt-1">Business Loan</p>
+              </div>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-[30px] p-8 shadow-xl">
+              <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
+
+              <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
+                Smooth documentation and quick approval for my Home Loan.
+                Amazing service.
+              </p>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-[#1E1B4B]">
+                  Priya Sharma
+                </h3>
+
+                <p className="text-gray-500 mt-1">Home Loan</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Footer */}
