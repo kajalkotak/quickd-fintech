@@ -559,7 +559,6 @@ Requirement: ${formData.message}
             </div>
           </div>
         </section>
-
         {/* Footer */}
         <footer className="mt-24 bg-gradient-to-br from-[#5B0E74] via-[#7E1F86] to-[#2B0B3A] rounded-[35px] p-6 md:p-10 shadow-2xl text-center text-white overflow-hidden relative">
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#F59E0B]/20 rounded-full blur-3xl" />
