@@ -485,7 +485,7 @@ Requirement: ${formData.message}
             <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
           </div>
 
-          <div className="flex flex-col gap-8 mt-14">
+          <div className="grid md:grid-cols-2 gap-8 mt-14">
             {/* Review 1 */}
             <div className="bg-white border border-[#E9D5FF] rounded-[30px] p-8 shadow-xl">
               <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
@@ -519,6 +519,42 @@ Requirement: ${formData.message}
                 </h3>
 
                 <p className="text-gray-500 mt-1">Home Loan</p>
+              </div>
+            </div>
+
+            {/* Review 3 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-[30px] p-8 shadow-xl">
+              <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
+
+              <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
+                Very fast processing and excellent guidance for my Car Loan.
+                Highly recommended.
+              </p>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-[#1E1B4B]">
+                  Amit Verma
+                </h3>
+
+                <p className="text-gray-500 mt-1">Car Loan</p>
+              </div>
+            </div>
+
+            {/* Review 4 */}
+            <div className="bg-white border border-[#E9D5FF] rounded-[30px] p-8 shadow-xl">
+              <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
+
+              <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
+                Best financial consultancy service. Team explained everything
+                clearly and helped throughout the process.
+              </p>
+
+              <div className="mt-6">
+                <h3 className="text-2xl font-bold text-[#1E1B4B]">
+                  Neha Patel
+                </h3>
+
+                <p className="text-gray-500 mt-1">Project Finance</p>
               </div>
             </div>
           </div>
