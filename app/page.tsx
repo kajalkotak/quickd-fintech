@@ -411,7 +411,7 @@ Requirement: ${formData.message}
               {/* QR */}
               <div className="bg-white rounded-3xl p-5 mt-6 shadow-lg">
                 <img
-                  src="/scanner.png"
+                  src="/scaner_final.jpeg"
                   alt="Payment QR"
                   className="w-full max-w-[260px] mx-auto"
                 />
