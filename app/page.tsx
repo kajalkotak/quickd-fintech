@@ -411,7 +411,7 @@ Requirement: ${formData.message}
               {/* QR */}
               <div className="bg-white rounded-3xl p-5 mt-6 shadow-lg">
                 <img
-                  src="/scaner_final.jpeg"
+                  src="/scaner_99.jpeg"
                   alt="Payment QR"
                   className="w-full max-w-[260px] mx-auto"
                 />
@@ -422,7 +422,7 @@ Requirement: ${formData.message}
                 <p className="text-gray-500 text-sm">Consultation Fees</p>
 
                 <h3 className="text-4xl font-extrabold text-[#5B0E74] mt-2">
-                  ₹199
+                  ₹99
                 </h3>
               </div>
 
