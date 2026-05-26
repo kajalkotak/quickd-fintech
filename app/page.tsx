@@ -368,6 +368,31 @@ Requirement: ${formData.message}
 
             <button
               type="button"
+              //   onClick={() => {
+              //     if (
+              //       !formData.name ||
+              //       !formData.email ||
+              //       !formData.mobile ||
+              //       !formData.loanType ||
+              //       !formData.amount ||
+              //       !formData.message
+              //     ) {
+              //       alert("Please fill all fields");
+              //       return;
+              //     }
+
+              //     setShowPayment(true);
+
+              //     setTimeout(() => {
+              //       document.getElementById("payment-section")?.scrollIntoView({
+              //         behavior: "smooth",
+              //       });
+              //     }, 200);
+              //   }}
+              //   className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-5 text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
+              // >
+              //   Book Consultation
+
               onClick={() => {
                 if (
                   !formData.name ||
@@ -381,13 +406,20 @@ Requirement: ${formData.message}
                   return;
                 }
 
-                setShowPayment(true);
+                const message = `Hello Quickd Fintech,
 
-                setTimeout(() => {
-                  document.getElementById("payment-section")?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-                }, 200);
+Name: ${formData.name}
+Email: ${formData.email}
+Mobile: ${formData.mobile}
+Loan Type: ${formData.loanType}
+Amount: ${formData.amount}
+Requirement: ${formData.message}`;
+
+                const whatsappUrl = `https://wa.me/919227143222?text=${encodeURIComponent(
+                  message,
+                )}`;
+
+                window.open(whatsappUrl, "_blank");
               }}
               className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-5 text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
             >
