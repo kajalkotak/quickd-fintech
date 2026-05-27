@@ -14,8 +14,73 @@ const services = [
   "Construction Loan",
 ];
 
+const translations = {
+  en: {
+    tagline: "SMART TECH.... FAST LENDING....",
+    description:
+      "Professional consultancy for business loans, MSME funding, mortgage loans, subsidy guidance & financial solutions.",
+
+    callNow: "Call Now",
+    directSupport: "Direct Support",
+
+    followInstagram: "Follow On Instagram",
+    dailyUpdates: "Daily Updates",
+
+    consultation: "Book Free Consultation",
+    expertConsultation: "Get Expert Consultation",
+
+    howWorks: "How Does It Work?",
+    process: "Simple 3 Step Process",
+
+    loanSolutions: "Loan Solutions",
+    requirements: "Share Your Requirements",
+
+    whyChoose: "Why Choose Us",
+    reviews: "Satisfied Clients Reviews",
+
+    fullName: "Full Name",
+    email: "Email Address",
+    mobile: "Mobile Number",
+    selectLoan: "Select Loan Type",
+    amount: "Amount Required (In Lacs)",
+    message: "Tell us your requirements",
+  },
+
+  gu: {
+    tagline: "સ્માર્ટ ટેક.... ફાસ્ટ લેન્ડિંગ....",
+    description:
+      "બિઝનેસ લોન, MSME ફંડિંગ, મોર્ટગેજ લોન, સબસિડી માર્ગદર્શન અને ફાઇનાન્સિયલ સોલ્યુશન્સ માટે વ્યાવસાયિક સલાહ.",
+
+    callNow: "હવે કોલ કરો",
+    directSupport: "સીધી મદદ",
+
+    followInstagram: "ઇન્સ્ટાગ્રામ પર ફોલો કરો",
+    dailyUpdates: "દૈનિક અપડેટ્સ",
+
+    consultation: "ફ્રી કન્સલ્ટેશન બુક કરો",
+    expertConsultation: "નિષ્ણાત સલાહ મેળવો",
+
+    howWorks: "આ કેવી રીતે કામ કરે છે?",
+    process: "સરળ 3 સ્ટેપ પ્રક્રિયા",
+
+    loanSolutions: "લોન સોલ્યુશન્સ",
+    requirements: "તમારી જરૂરિયાત શેર કરો",
+
+    whyChoose: "અમને શા માટે પસંદ કરો?",
+    reviews: "સંતોષકારક ગ્રાહક પ્રતિભાવો",
+
+    fullName: "પૂરું નામ",
+    email: "ઈમેલ એડ્રેસ",
+    mobile: "મોબાઇલ નંબર",
+    selectLoan: "લોન પ્રકાર પસંદ કરો",
+    amount: "જરૂરી રકમ (લાખમાં)",
+    message: "તમારી જરૂરિયાત લખો",
+  },
+};
+
 export default function Home() {
   const [showPayment, setShowPayment] = useState(false);
+  const [language, setLanguage] = useState("en");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -53,6 +118,29 @@ Requirement: ${formData.message}
 
       {/* Main Container */}
       <div className="max-w-2xl mx-auto px-5 -mt-24 pb-20 relative z-10">
+        <div className="flex justify-center gap-4 mt-6 mb-6">
+          <button
+            onClick={() => setLanguage("en")}
+            className={`px-5 py-2 rounded-full font-bold ${
+              language === "en"
+                ? "bg-[#5B0E74] text-white"
+                : "bg-white text-[#5B0E74]"
+            }`}
+          >
+            English
+          </button>
+
+          <button
+            onClick={() => setLanguage("gu")}
+            className={`px-5 py-2 rounded-full font-bold ${
+              language === "gu"
+                ? "bg-[#5B0E74] text-white"
+                : "bg-white text-[#5B0E74]"
+            }`}
+          >
+            ગુજરાતી
+          </button>
+        </div>
         {/* Logo */}
         <div className="flex justify-center">
           <div className="bg-white rounded-[35px] px-8 py-6 shadow-2xl border border-[#7E22CE]">
@@ -67,16 +155,19 @@ Requirement: ${formData.message}
         {/* Heading */}
         <div className="text-center mt-8">
           <h1 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)] tracking-wide">
-            QUICKD FINTECH
+            {language === "en" ? "QUICKD FINTECH" : "ક્વિકડ ફિનટેક"}
           </h1>
 
           <p className="text-[#5B0E74] font-semibold mt-3 text-base md:text-lg">
-            SMART TECH.... FAST LENDING....
+            {language === "en"
+              ? "SMART TECH.... FAST LENDING...."
+              : "સ્માર્ટ ટેક.... ફાસ્ટ લેન્ડિંગ...."}
           </p>
 
           <p className="text-[#E9D5FF] leading-8 mt-6 max-w-lg mx-auto text-sm md:text-base">
-            Professional consultancy for business loans, MSME funding, mortgage
-            loans, subsidy guidance & financial solutions.
+            {language === "en"
+              ? "Professional consultancy for business loans, MSME funding, mortgage loans, subsidy guidance & financial solutions."
+              : "બિઝનેસ લોન, MSME ફંડિંગ, મોર્ટગેજ લોન, સબસિડી માર્ગદર્શન અને ફાઇનાન્સિયલ સોલ્યુશન્સ માટે વ્યાવસાયિક સલાહ."}
           </p>
         </div>
 
@@ -97,11 +188,11 @@ Requirement: ${formData.message}
 
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">
-                    Direct Support
+                    {language === "en" ? "Direct Support" : "સીધી મદદ"}
                   </p>
 
                   <h3 className="text-base md:text-2xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Call Now
+                    {language === "en" ? "Call Now" : "હવે કોલ કરો"}
                   </h3>
                 </div>
               </div>
@@ -128,11 +219,13 @@ Requirement: ${formData.message}
 
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">
-                    Daily Updates
+                    {language === "en" ? "Daily Updates" : "દૈનિક અપડેટ્સ"}
                   </p>
 
                   <h3 className="text-base md:text-2xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Follow On Instagram
+                    {language === "en"
+                      ? "Follow On Instagram"
+                      : "ઇન્સ્ટાગ્રામ પર ફોલો કરો"}
                   </h3>
                 </div>
               </div>
@@ -158,11 +251,15 @@ Requirement: ${formData.message}
 
                 <div className="text-left">
                   <p className="text-xs md:text-sm text-gray-500 font-medium">
-                    Get Expert Consultation
+                    {language === "en"
+                      ? "Get Expert Consultation"
+                      : "નિષ્ણાત સલાહ મેળવો"}
                   </p>
 
                   <h3 className="text-base md:text-2xl font-bold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Book Consultation
+                    {language === "en"
+                      ? "Book Consultation"
+                      : "કન્સલ્ટેશન બુક કરો"}
                   </h3>
                 </div>
               </div>
@@ -178,11 +275,15 @@ Requirement: ${formData.message}
         <section className="mt-28">
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-              How Does It Work?
+              {language === "en"
+                ? "How Does It Work?"
+                : "આ કેવી રીતે કામ કરે છે?"}
             </h2>
 
             <p className="text-[#5B0E74] font-semibold mt-4 text-lg">
-              Simple 3 Step Process
+              {language === "en"
+                ? "Simple 3 Step Process"
+                : "સરળ 3 સ્ટેપ પ્રક્રિયા"}
             </p>
 
             <div className="w-32 h-1.5 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-6 rounded-full" />
@@ -198,12 +299,15 @@ Requirement: ${formData.message}
 
                 <div className="p-10 text-center flex flex-col flex-1">
                   <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Paid Consultation
+                    {language === "en"
+                      ? "Free Consultation"
+                      : "ફ્રી કન્સલ્ટેશન"}
                   </h3>
 
                   <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    Book your consultation according to your loan requirement
-                    and connect with our financial advisor.
+                    {language === "en"
+                      ? "Book your consultation according to your loan requirement and connect with our financial advisor."
+                      : "તમારી લોન જરૂરિયાત મુજબ કન્સલ્ટેશન બુક કરો અને અમારા ફાઇનાન્સિયલ એડવાઇઝર સાથે જોડાઓ."}
                   </p>
                 </div>
               </div>
@@ -223,12 +327,15 @@ Requirement: ${formData.message}
 
                 <div className="p-10 text-center flex flex-col flex-1">
                   <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Expert Guidance
+                    {language === "en"
+                      ? "Expert Guidance"
+                      : "નિષ્ણાત માર્ગદર્શન"}
                   </h3>
 
                   <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    Our expert team contacts you and shares a custom document
-                    checklist for your profile.
+                    {language === "en"
+                      ? "Our expert team contacts you and shares a custom document checklist for your profile."
+                      : "અમારી નિષ્ણાત ટીમ તમને સંપર્ક કરે છે અને તમારા પ્રોફાઇલ માટે જરૂરી ડોક્યુમેન્ટ ચેકલિસ્ટ આપે છે."}
                   </p>
                 </div>
               </div>
@@ -248,12 +355,13 @@ Requirement: ${formData.message}
 
                 <div className="p-10 text-center flex flex-col flex-1">
                   <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    Loan Process
+                    {language === "en" ? "Loan Process" : "લોન પ્રક્રિયા"}
                   </h3>
 
                   <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    Submit documents, choose your preferred bank and we handle
-                    the complete loan process.
+                    {language === "en"
+                      ? "Submit documents, choose your preferred bank and we handle the complete loan process."
+                      : "ડોક્યુમેન્ટ સબમિટ કરો, તમારી પસંદગીની બેંક પસંદ કરો અને અમે સંપૂર્ણ લોન પ્રક્રિયા સંભાળીએ છીએ."}
                   </p>
                 </div>
               </div>
@@ -265,14 +373,37 @@ Requirement: ${formData.message}
         <section className="mt-20 md:mt-24">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-              Loan Solutions
+              {language === "en" ? "Loan Solutions" : "લોન સોલ્યુશન્સ"}
             </h2>
 
             <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
           </div>
 
           <div className="flex flex-col gap-5 mt-12">
-            {services.map((service, index) => (
+            {(language === "en"
+              ? [
+                  "Business Loan",
+                  "Car Loan",
+                  "Cash Credit / Overdraft",
+                  "Machinery Loan",
+                  "Home Loan",
+                  "Loan Against Property",
+                  "Project Finance",
+                  "Personal Loan",
+                  "Construction Loan",
+                ]
+              : [
+                  "બિઝનેસ લોન",
+                  "કાર લોન",
+                  "કેશ ક્રેડિટ / ઓવરડ્રાફ્ટ",
+                  "મશીનરી લોન",
+                  "હોમ લોન",
+                  "પ્રોપર્ટી સામે લોન",
+                  "પ્રોજેક્ટ ફાઇનાન્સ",
+                  "પર્સનલ લોન",
+                  "કન્સ્ટ્રક્શન લોન",
+                ]
+            ).map((service, index) => (
               <div
                 key={index}
                 className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[28px] p-5 md:p-6 shadow-lg hover:scale-[1.02] transition duration-300 border border-[#7E22CE] text-center"
@@ -289,7 +420,9 @@ Requirement: ${formData.message}
         <section id="consultation" className="mt-24">
           <div className="text-center">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-              Share Your Requirements
+              {language === "en"
+                ? "Share Your Requirements"
+                : "તમારી જરૂરિયાત શેર કરો"}
             </h2>
 
             <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
@@ -298,7 +431,7 @@ Requirement: ${formData.message}
           <form className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[35px] p-5 md:p-8 mt-14 shadow-xl flex flex-col gap-5 border border-[#7E22CE]">
             <input
               type="text"
-              placeholder="Full Name"
+              placeholder={language === "en" ? "Full Name" : "પૂરું નામ"}
               required
               value={formData.name}
               onChange={(e) =>
@@ -309,7 +442,7 @@ Requirement: ${formData.message}
 
             <input
               type="email"
-              placeholder="Email Address"
+              placeholder={language === "en" ? "Email Address" : "ઈમેલ એડ્રેસ"}
               required
               value={formData.email}
               onChange={(e) =>
@@ -320,7 +453,7 @@ Requirement: ${formData.message}
 
             <input
               type="text"
-              placeholder="Mobile Number"
+              placeholder={language === "en" ? "Mobile Number" : "મોબાઇલ નંબર"}
               required
               value={formData.mobile}
               onChange={(e) =>
@@ -335,18 +468,47 @@ Requirement: ${formData.message}
               onChange={(e) =>
                 setFormData({ ...formData, loanType: e.target.value })
               }
-              className="bg-[#1B0827] border border-[#7E22CE] text-white placeholder:text-[#C084FC] rounded-2xl p-4 md:p-5 outline-none"
+              className="bg-[#1B0827] border border-[#7E22CE] text-white rounded-2xl p-4 md:p-5 outline-none"
             >
-              <option value="">Select Loan Type</option>
+              <option value="">
+                {language === "en" ? "Select Loan Type" : "લોન પ્રકાર પસંદ કરો"}
+              </option>
 
-              {services.map((service, index) => (
+              {(language === "en"
+                ? [
+                    "Business Loan",
+                    "Car Loan",
+                    "Cash Credit / Overdraft",
+                    "Machinery Loan",
+                    "Home Loan",
+                    "Loan Against Property",
+                    "Project Finance",
+                    "Personal Loan",
+                    "Construction Loan",
+                  ]
+                : [
+                    "બિઝનેસ લોન",
+                    "કાર લોન",
+                    "કેશ ક્રેડિટ / ઓવરડ્રાફ્ટ",
+                    "મશીનરી લોન",
+                    "હોમ લોન",
+                    "પ્રોપર્ટી સામે લોન",
+                    "પ્રોજેક્ટ ફાઇનાન્સ",
+                    "પર્સનલ લોન",
+                    "કન્સ્ટ્રક્શન લોન",
+                  ]
+              ).map((service, index) => (
                 <option key={index}>{service}</option>
               ))}
             </select>
 
             <input
               type="text"
-              placeholder="Amount Required (In Lacs)"
+              placeholder={
+                language === "en"
+                  ? "Amount Required (In Lacs)"
+                  : "જરૂરી રકમ (લાખમાં)"
+              }
               required
               value={formData.amount}
               onChange={(e) =>
@@ -357,7 +519,11 @@ Requirement: ${formData.message}
 
             <textarea
               rows={5}
-              placeholder="Tell us your requirements"
+              placeholder={
+                language === "en"
+                  ? "Tell us your requirements"
+                  : "તમારી જરૂરિયાત લખો"
+              }
               required
               value={formData.message}
               onChange={(e) =>
@@ -368,31 +534,6 @@ Requirement: ${formData.message}
 
             <button
               type="button"
-              //   onClick={() => {
-              //     if (
-              //       !formData.name ||
-              //       !formData.email ||
-              //       !formData.mobile ||
-              //       !formData.loanType ||
-              //       !formData.amount ||
-              //       !formData.message
-              //     ) {
-              //       alert("Please fill all fields");
-              //       return;
-              //     }
-
-              //     setShowPayment(true);
-
-              //     setTimeout(() => {
-              //       document.getElementById("payment-section")?.scrollIntoView({
-              //         behavior: "smooth",
-              //       });
-              //     }, 200);
-              //   }}
-              //   className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-5 text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
-              // >
-              //   Book Consultation
-
               onClick={() => {
                 if (
                   !formData.name ||
@@ -402,7 +543,11 @@ Requirement: ${formData.message}
                   !formData.amount ||
                   !formData.message
                 ) {
-                  alert("Please fill all fields");
+                  alert(
+                    language === "en"
+                      ? "Please fill all fields"
+                      : "કૃપા કરીને બધી માહિતી भरो",
+                  );
                   return;
                 }
 
@@ -423,7 +568,9 @@ Requirement: ${formData.message}`;
               }}
               className="bg-gradient-to-r from-[#5B0E74] to-[#F59E0B] text-white rounded-full py-5 text-xl font-bold hover:scale-[1.02] transition duration-300 shadow-lg"
             >
-              Book Free Consultation
+              {language === "en"
+                ? "Book Free Consultation"
+                : "ફ્રી કન્સલ્ટેશન બુક કરો"}
             </button>
           </form>
 
@@ -433,11 +580,13 @@ Requirement: ${formData.message}`;
               className="mt-10 bg-[#F3E8FF] rounded-3xl p-5 border border-[#D8B4FE]"
             >
               <h2 className="text-2xl font-bold text-[#2B0B3A] text-center">
-                Scan & Pay
+                {language === "en" ? "Scan & Pay" : "સ્કેન કરો અને પેમેન્ટ કરો"}
               </h2>
 
               <p className="text-gray-600 text-center mt-3">
-                Complete consultation payment to continue
+                {language === "en"
+                  ? "Complete consultation payment to continue"
+                  : "આગળ વધવા માટે કન્સલ્ટેશન પેમેન્ટ પૂર્ણ કરો"}
               </p>
 
               {/* QR */}
@@ -451,7 +600,9 @@ Requirement: ${formData.message}`;
 
               {/* Amount */}
               <div className="mt-6 text-center">
-                <p className="text-gray-500 text-sm">Consultation Fees</p>
+                <p className="text-gray-500 text-sm">
+                  {language === "en" ? "Consultation Fees" : "કન્સલ્ટેશન ફી"}
+                </p>
 
                 <h3 className="text-4xl font-extrabold text-[#5B0E74] mt-2">
                   ₹99
@@ -461,7 +612,11 @@ Requirement: ${formData.message}`;
               {/* Transaction ID */}
               <input
                 type="text"
-                placeholder="Enter Transaction ID"
+                placeholder={
+                  language === "en"
+                    ? "Enter Transaction ID"
+                    : "ટ્રાન્ઝેક્શન આઈડી દાખલ કરો"
+                }
                 id="transactionId"
                 className="w-full mt-6 border border-[#E9D5FF] rounded-2xl p-4 outline-none"
               />
@@ -474,7 +629,12 @@ Requirement: ${formData.message}`;
                   ).value;
 
                   if (!transactionId) {
-                    alert("Please enter transaction ID");
+                    alert(
+                      language === "en"
+                        ? "Please enter transaction ID"
+                        : "કૃપા કરીને ટ્રાન્ઝેક્શન આઈડી દાખલ કરો",
+                    );
+
                     return;
                   }
 
@@ -497,7 +657,9 @@ Transaction ID: ${transactionId}`;
                 }}
                 className="w-full mt-5 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold py-4 rounded-full shadow-lg hover:scale-[1.02] transition duration-300"
               >
-                I've Completed Payment
+                {language === "en"
+                  ? "I've Completed Payment"
+                  : "મેં પેમેન્ટ પૂર્ણ કર્યું"}
               </button>
             </div>
           )}
@@ -507,7 +669,7 @@ Transaction ID: ${transactionId}`;
         <section className="mt-24">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-              Why Choose Us
+              {language === "en" ? "Why Choose Us" : "અમને શા માટે પસંદ કરો?"}
             </h2>
 
             <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
@@ -519,12 +681,15 @@ Transaction ID: ${transactionId}`;
               <div className="text-6xl">💼</div>
 
               <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
-                15+ Years Experience
+                {language === "en"
+                  ? "15+ Years Experience"
+                  : "15+ વર્ષનો અનુભવ"}
               </h3>
 
               <p className="text-gray-600 leading-8 mt-4">
-                Get the best loan guidance from our experienced financial
-                consultancy team.
+                {language === "en"
+                  ? "Get the best loan guidance from our experienced financial consultancy team."
+                  : "અમારી અનુભવી ફાઇનાન્સિયલ કન્સલ્ટન્સી ટીમ પાસેથી શ્રેષ્ઠ લોન માર્ગદર્શન મેળવો."}
               </p>
             </div>
 
@@ -533,12 +698,13 @@ Transaction ID: ${transactionId}`;
               <div className="text-6xl">⚡</div>
 
               <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
-                Fast Processing
+                {language === "en" ? "Fast Processing" : "ઝડપી પ્રક્રિયા"}
               </h3>
 
               <p className="text-gray-600 leading-8 mt-4">
-                Quick loan approvals with smooth documentation and hassle-free
-                process.
+                {language === "en"
+                  ? "Quick loan approvals with smooth documentation and hassle-free process."
+                  : "સરળ ડોક્યુમેન્ટેશન અને સરળ પ્રક્રિયા સાથે ઝડપી લોન મંજૂરી."}
               </p>
             </div>
 
@@ -547,12 +713,15 @@ Transaction ID: ${transactionId}`;
               <div className="text-6xl">⭐</div>
 
               <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
-                10000+ Happy Customers
+                {language === "en"
+                  ? "10000+ Happy Customers"
+                  : "10000+ ખુશ ગ્રાહકો"}
               </h3>
 
               <p className="text-gray-600 leading-8 mt-4">
-                Trusted by thousands of customers for loan consultancy and
-                financial support.
+                {language === "en"
+                  ? "Trusted by thousands of customers for loan consultancy and financial support."
+                  : "હજારો ગ્રાહકો દ્વારા વિશ્વાસપાત્ર લોન કન્સલ્ટન્સી અને ફાઇનાન્સિયલ સપોર્ટ."}
               </p>
             </div>
 
@@ -561,12 +730,15 @@ Transaction ID: ${transactionId}`;
               <div className="text-6xl">🤝</div>
 
               <h3 className="text-2xl font-bold text-[#1E1B4B] mt-6">
-                Transparency & Trust
+                {language === "en"
+                  ? "Transparency & Trust"
+                  : "પારદર્શિતા અને વિશ્વાસ"}
               </h3>
 
               <p className="text-gray-600 leading-8 mt-4">
-                We believe in ethical consultancy with complete transparency and
-                client satisfaction.
+                {language === "en"
+                  ? "We believe in ethical consultancy with complete transparency and client satisfaction."
+                  : "અમે સંપૂર્ણ પારદર્શિતા અને ગ્રાહક સંતોષ સાથે નૈતિક કન્સલ્ટન્સીમાં વિશ્વાસ રાખીએ છીએ."}
               </p>
             </div>
           </div>
@@ -576,7 +748,9 @@ Transaction ID: ${transactionId}`;
         <section className="mt-24">
           <div className="text-center">
             <h2 className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-              Satisfied Clients Reviews
+              {language === "en"
+                ? "Satisfied Clients Reviews"
+                : "સંતોષકારક ગ્રાહક પ્રતિભાવો"}
             </h2>
 
             <div className="w-28 h-1 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-5 rounded-full" />
@@ -588,8 +762,9 @@ Transaction ID: ${transactionId}`;
               <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
 
               <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
-                Excellent support for my Business Loan process. Team was very
-                professional and transparent.
+                {language === "en"
+                  ? "Excellent support for my Business Loan process. Team was very professional and transparent."
+                  : "મારી બિઝનેસ લોન પ્રક્રિયા માટે ઉત્તમ સહાય મળી. ટીમ ખૂબ જ વ્યાવસાયિક અને પારદર્શક હતી."}
               </p>
 
               <div className="mt-6">
@@ -597,7 +772,9 @@ Transaction ID: ${transactionId}`;
                   Rahul Mehta
                 </h3>
 
-                <p className="text-gray-500 mt-1">Business Loan</p>
+                <p className="text-gray-500 mt-1">
+                  {language === "en" ? "Business Loan" : "બિઝનેસ લોન"}
+                </p>
               </div>
             </div>
 
@@ -606,8 +783,9 @@ Transaction ID: ${transactionId}`;
               <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
 
               <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
-                Smooth documentation and quick approval for my Home Loan.
-                Amazing service.
+                {language === "en"
+                  ? "Smooth documentation and quick approval for my Home Loan. Amazing service."
+                  : "મારી હોમ લોન માટે સરળ ડોક્યુમેન્ટેશન અને ઝડપી મંજૂરી મળી. અદ્ભુત સેવા."}
               </p>
 
               <div className="mt-6">
@@ -615,7 +793,9 @@ Transaction ID: ${transactionId}`;
                   Priya Sharma
                 </h3>
 
-                <p className="text-gray-500 mt-1">Home Loan</p>
+                <p className="text-gray-500 mt-1">
+                  {language === "en" ? "Home Loan" : "હોમ લોન"}
+                </p>
               </div>
             </div>
 
@@ -624,8 +804,9 @@ Transaction ID: ${transactionId}`;
               <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
 
               <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
-                Very fast processing and excellent guidance for my Car Loan.
-                Highly recommended.
+                {language === "en"
+                  ? "Very fast processing and excellent guidance for my Car Loan. Highly recommended."
+                  : "મારી કાર લોન માટે ખૂબ જ ઝડપી પ્રક્રિયા અને ઉત્તમ માર્ગદર્શન મળ્યું. ખૂબ ભલામણ કરું છું."}
               </p>
 
               <div className="mt-6">
@@ -633,7 +814,9 @@ Transaction ID: ${transactionId}`;
                   Amit Verma
                 </h3>
 
-                <p className="text-gray-500 mt-1">Car Loan</p>
+                <p className="text-gray-500 mt-1">
+                  {language === "en" ? "Car Loan" : "કાર લોન"}
+                </p>
               </div>
             </div>
 
@@ -642,8 +825,9 @@ Transaction ID: ${transactionId}`;
               <div className="text-yellow-400 text-2xl">⭐⭐⭐⭐⭐</div>
 
               <p className="text-[#1E1B4B] text-lg leading-9 mt-5 font-medium">
-                Best financial consultancy service. Team explained everything
-                clearly and helped throughout the process.
+                {language === "en"
+                  ? "Best financial consultancy service. Team explained everything clearly and helped throughout the process."
+                  : "શ્રેષ્ઠ ફાઇનાન્સિયલ કન્સલ્ટન્સી સેવા. ટીમે બધું સ્પષ્ટ રીતે સમજાવ્યું અને સંપૂર્ણ પ્રક્રિયામાં મદદ કરી."}
               </p>
 
               <div className="mt-6">
@@ -651,7 +835,9 @@ Transaction ID: ${transactionId}`;
                   Neha Patel
                 </h3>
 
-                <p className="text-gray-500 mt-1">Project Finance</p>
+                <p className="text-gray-500 mt-1">
+                  {language === "en" ? "Project Finance" : "પ્રોજેક્ટ ફાઇનાન્સ"}
+                </p>
               </div>
             </div>
           </div>
@@ -673,17 +859,20 @@ Transaction ID: ${transactionId}`;
 
             {/* Brand */}
             <h2 className="text-3xl md:text-4xl font-extrabold mt-6">
-              QUICKD FINTECH
+              {language === "en" ? "QUICKD FINTECH" : "ક્વિકડ ફિનટેક"}
             </h2>
 
             <p className="text-yellow-300 font-semibold mt-3 tracking-wide text-sm md:text-base">
-              SMART TECH.... FAST LENDING....
+              {language === "en"
+                ? "SMART TECH.... FAST LENDING...."
+                : "સ્માર્ટ ટેક.... ફાસ્ટ લેન્ડિંગ...."}
             </p>
 
             {/* Description */}
             <p className="text-gray-200 leading-8 mt-6 max-w-xl mx-auto text-sm md:text-base">
-              Professional consultancy for business loans, MSME funding, subsidy
-              guidance, mortgage loans & financial solutions.
+              {language === "en"
+                ? "Professional consultancy for business loans, MSME funding, subsidy guidance, mortgage loans & financial solutions."
+                : "બિઝનેસ લોન, MSME ફંડિંગ, સબસિડી માર્ગદર્શન, મોર્ટગેજ લોન અને ફાઇનાન્સિયલ સોલ્યુશન્સ માટે વ્યાવસાયિક સલાહ."}
             </p>
 
             {/* Contact */}
@@ -699,35 +888,63 @@ Transaction ID: ${transactionId}`;
 
             {/* Address */}
             <div className="mt-10 text-gray-300 leading-8 text-sm md:text-base">
+              {/* Corporate Office */}
               <div className="mb-10">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  Corporate Office
+                  {language === "en" ? "Corporate Office" : "કોર્પોરેટ ઓફિસ"}
                 </h3>
 
-                <p>1st Floor, One Stop Carz,</p>
+                <p>
+                  {language === "en"
+                    ? "1st Floor, One Stop Carz,"
+                    : "1લો માળ, વન સ્ટોપ કાર્ઝ,"}
+                </p>
 
-                <p>Opp. Welcare Hospital,</p>
+                <p>
+                  {language === "en"
+                    ? "Opp. Welcare Hospital,"
+                    : "વેલકેર હોસ્પિટલ સામે,"}
+                </p>
 
-                <p>Atladara, Vadodara – 390012</p>
+                <p>
+                  {language === "en"
+                    ? "Atladara, Vadodara – 390012"
+                    : "અટલાદરા, વડોદરા – 390012"}
+                </p>
               </div>
 
+              {/* Registered Office */}
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  Registered Office
+                  {language === "en" ? "Registered Office" : "રજિસ્ટર્ડ ઓફિસ"}
                 </h3>
 
-                <p>2nd Floor, Kevalam Corner,</p>
+                <p>
+                  {language === "en"
+                    ? "2nd Floor, Kevalam Corner,"
+                    : "2જો માળ, કેવલમ કોર્નર,"}
+                </p>
 
-                <p>Nr. G.T. Seth School,</p>
+                <p>
+                  {language === "en"
+                    ? "Nr. G.T. Seth School,"
+                    : "જી.ટી. સેઠ સ્કૂલ પાસે,"}
+                </p>
 
-                <p>KKV Hall, Rajkot – 360005</p>
+                <p>
+                  {language === "en"
+                    ? "KKV Hall, Rajkot – 360005"
+                    : "KKV હોલ, રાજકોટ – 360005"}
+                </p>
               </div>
             </div>
 
             {/* Bottom */}
             <div className="border-t border-white/20 mt-10 pt-6">
               <p className="text-gray-300 text-sm md:text-base">
-                © 2026 QUICKD FINTECH. All Rights Reserved.
+                {language === "en"
+                  ? "© 2026 QUICKD FINTECH. All Rights Reserved."
+                  : "© 2026 ક્વિકડ ફિનટેક. સર્વ અધિકારો સુરક્ષિત."}
               </p>
             </div>
           </div>
