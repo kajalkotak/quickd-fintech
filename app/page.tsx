@@ -289,88 +289,173 @@ Requirement: ${formData.message}
             <div className="w-32 h-1.5 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-6 rounded-full" />
           </div>
 
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: "📋",
-                titleEn: "Eligibility Check",
-                titleGu: "પાત્રતા ચકાસણી",
-                descEn: "Check eligibility & required documents",
-                descGu: "પાત્રતા અને જરૂરી દસ્તાવેજોની ચકાસણી",
-              },
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* step 1 */}
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#FF5A1F] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">01</h1>
+              </div>
 
-              {
-                icon: "🎯",
-                titleEn: "Expert Guidance",
-                titleGu: "નિષ્ણાત માર્ગદર્શન",
-                descEn: "15+ years industry experience",
-                descGu: "15+ વર્ષનો ઉદ્યોગ અનુભવ",
-              },
-
-              {
-                icon: "🏛️",
-                titleEn: "Govt Subsidy & Benefits",
-                titleGu: "સરકારી સબસિડી અને લાભ",
-                descEn: "Subsidy schemes & benefits support",
-                descGu: "સબસિડી યોજનાઓ અને લાભ માર્ગદર્શન",
-              },
-
-              {
-                icon: "🏦",
-                titleEn: "Bank Charges Analysis",
-                titleGu: "બેંક ચાર્જિસ વિશ્લેષણ",
-                descEn: "Avoid unnecessary bank charges",
-                descGu: "બિનજરૂરી બેંક ચાર્જિસથી બચો",
-              },
-
-              {
-                icon: "💰",
-                titleEn: "Collateral Free Loan",
-                titleGu: "કોલેટરલ ફ્રી લોન",
-                descEn: "Funding options without collateral",
-                descGu: "કોલેટરલ વગરની ફંડિંગ સુવિધા",
-              },
-
-              {
-                icon: "✅",
-                titleEn: "Zero Advance Fees",
-                titleGu: "શૂન્ય એડવાન્સ ફી",
-                descEn: "Transparent & fair process",
-                descGu: "પારદર્શક અને વિશ્વાસપાત્ર પ્રક્રિયા",
-              },
-
-              {
-                icon: "📉",
-                titleEn: "Lower Interest Rate",
-                titleGu: "ઓછો વ્યાજ દર",
-                descEn: "Best available ROI options",
-                descGu: "શ્રેષ્ઠ ઉપલબ્ધ વ્યાજ દર વિકલ્પો",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74]
-        border border-[#7E22CE]
-        rounded-3xl
-        p-8
-        shadow-xl
-        hover:-translate-y-2
-        hover:shadow-purple-500/20
-        transition-all duration-300"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl mb-5">
-                  {item.icon}
-                </div>
-
-                <h3 className="text-xl md:text-2xl font-bold text-white">
-                  {language === "en" ? item.titleEn : item.titleGu}
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en" ? "Eligibility Check" : "પાત્રતા ચકાસણી"}
                 </h3>
 
-                <p className="text-[#E9D5FF] leading-7 mt-4">
-                  {language === "en" ? item.descEn : item.descGu}
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Eligibility, documents and financial institution guidelines check."
+                    : "પાત્રતા, દસ્તાવેજો અને ફાઇનાન્સિયલ સંસ્થાની માર્ગદર્શિકા ચકાસણી."}
                 </p>
               </div>
-            ))}
+            </div>
+
+            {/* step 2 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#4F6BED] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">02</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en" ? "Expert Guidance" : "નિષ્ણાત માર્ગદર્શન"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "15+ years experience with best financial advice and funding solutions."
+                    : "15+ વર્ષનો અનુભવ સાથે શ્રેષ્ઠ ફાઇનાન્સિયલ સલાહ અને ફંડિંગ સોલ્યુશન્સ."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 3 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#F59E0B] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">03</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en"
+                    ? "Government Subsidy & Benefits"
+                    : "સરકારી સબસિડી અને લાભ"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Government schemes, subsidy eligibility and benefits guidance."
+                    : "સરકારી યોજનાઓ, સબસિડી પાત્રતા અને લાભ માર્ગદર્શન."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 4 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#EC4899] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">04</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en"
+                    ? "Bank Charges Analysis"
+                    : "બેંક ચાર્જિસ વિશ્લેષણ"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Avoid unnecessary charges and get the best banking options."
+                    : "બિનજરૂરી ચાર્જિસ ટાળો અને શ્રેષ્ઠ બેંકિંગ વિકલ્પ મેળવો."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 5 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#10B981] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">05</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en"
+                    ? "Collateral Free Loan"
+                    : "કોલેટરલ ફ્રી લોન"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Collateral free loan options under CGTMSE and other eligible schemes."
+                    : "CGTMSE અને અન્ય પાત્ર યોજનાઓ હેઠળ કોલેટરલ ફ્રી લોન વિકલ્પો."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 6 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#6366F1] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">06</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en" ? "Zero Advance Fees" : "શૂન્ય એડવાન્સ ફી"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Transparent process with no unnecessary advance charges."
+                    : "પારદર્શક પ્રક્રિયા સાથે બિનજરૂરી એડવાન્સ ચાર્જિસ નહીં."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 7 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#EF4444] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">07</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en" ? "Lower Interest Rate" : "ઓછો વ્યાજ દર"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "We help you secure loans with the most competitive interest rates."
+                    : "અમે તમને સૌથી સ્પર્ધાત્મક વ્યાજ દરે લોન મેળવવામાં મદદ કરીએ છીએ."}
+                </p>
+              </div>
+            </div>
+
+            {/* step 8 */}
+
+            <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
+              <div className="bg-[#14B8A6] h-36 flex items-center justify-center">
+                <h1 className="text-7xl font-black text-white">08</h1>
+              </div>
+
+              <div className="p-10 text-center flex flex-col flex-1">
+                <h3 className="text-3xl font-extrabold text-white">
+                  {language === "en"
+                    ? "Loan Processing Support"
+                    : "લોન પ્રોસેસિંગ સપોર્ટ"}
+                </h3>
+
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "From documentation to final approval, we support you throughout the complete loan process."
+                    : "દસ્તાવેજોથી લઈને અંતિમ મંજૂરી સુધી અમે સંપૂર્ણ લોન પ્રક્રિયામાં મદદ કરીએ છીએ."}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
