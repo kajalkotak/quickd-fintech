@@ -276,96 +276,101 @@ Requirement: ${formData.message}
           <div className="text-center">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
               {language === "en"
-                ? "How Does It Work?"
-                : "આ કેવી રીતે કામ કરે છે?"}
+                ? "How We Help You Get Loan Approval"
+                : "લોન મંજૂરીમાં અમે કેવી રીતે મદદ કરીએ છીએ"}
             </h2>
 
             <p className="text-[#5B0E74] font-semibold mt-4 text-lg">
               {language === "en"
-                ? "Simple 3 Step Process"
-                : "સરળ 3 સ્ટેપ પ્રક્રિયા"}
+                ? "Professional 7-Step Loan Assistance Process"
+                : "વ્યાવસાયિક 7-સ્ટેપ લોન સહાય પ્રક્રિયા"}
             </p>
 
             <div className="w-32 h-1.5 bg-gradient-to-r from-[#F59E0B] to-[#8E24AA] mx-auto mt-6 rounded-full" />
           </div>
 
-          <div className="mt-20 flex flex-col md:flex-row items-stretch justify-center gap-8">
-            {/* Step 1 */}
-            <div className="relative flex-1">
-              <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
-                <div className="bg-[#FF5A1F] h-36 flex items-center justify-center">
-                  <h1 className="text-7xl font-black text-white">01</h1>
+          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: "📋",
+                titleEn: "Eligibility Check",
+                titleGu: "પાત્રતા ચકાસણી",
+                descEn: "Check eligibility & required documents",
+                descGu: "પાત્રતા અને જરૂરી દસ્તાવેજોની ચકાસણી",
+              },
+
+              {
+                icon: "🎯",
+                titleEn: "Expert Guidance",
+                titleGu: "નિષ્ણાત માર્ગદર્શન",
+                descEn: "15+ years industry experience",
+                descGu: "15+ વર્ષનો ઉદ્યોગ અનુભવ",
+              },
+
+              {
+                icon: "🏛️",
+                titleEn: "Govt Subsidy & Benefits",
+                titleGu: "સરકારી સબસિડી અને લાભ",
+                descEn: "Subsidy schemes & benefits support",
+                descGu: "સબસિડી યોજનાઓ અને લાભ માર્ગદર્શન",
+              },
+
+              {
+                icon: "🏦",
+                titleEn: "Bank Charges Analysis",
+                titleGu: "બેંક ચાર્જિસ વિશ્લેષણ",
+                descEn: "Avoid unnecessary bank charges",
+                descGu: "બિનજરૂરી બેંક ચાર્જિસથી બચો",
+              },
+
+              {
+                icon: "💰",
+                titleEn: "Collateral Free Loan",
+                titleGu: "કોલેટરલ ફ્રી લોન",
+                descEn: "Funding options without collateral",
+                descGu: "કોલેટરલ વગરની ફંડિંગ સુવિધા",
+              },
+
+              {
+                icon: "✅",
+                titleEn: "Zero Advance Fees",
+                titleGu: "શૂન્ય એડવાન્સ ફી",
+                descEn: "Transparent & fair process",
+                descGu: "પારદર્શક અને વિશ્વાસપાત્ર પ્રક્રિયા",
+              },
+
+              {
+                icon: "📉",
+                titleEn: "Lower Interest Rate",
+                titleGu: "ઓછો વ્યાજ દર",
+                descEn: "Best available ROI options",
+                descGu: "શ્રેષ્ઠ ઉપલબ્ધ વ્યાજ દર વિકલ્પો",
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74]
+        border border-[#7E22CE]
+        rounded-3xl
+        p-8
+        shadow-xl
+        hover:-translate-y-2
+        hover:shadow-purple-500/20
+        transition-all duration-300"
+              >
+                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl mb-5">
+                  {item.icon}
                 </div>
 
-                <div className="p-10 text-center flex flex-col flex-1">
-                  <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    {language === "en"
-                      ? "Free Consultation"
-                      : "ફ્રી કન્સલ્ટેશન"}
-                  </h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">
+                  {language === "en" ? item.titleEn : item.titleGu}
+                </h3>
 
-                  <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    {language === "en"
-                      ? "Book your consultation according to your loan requirement and connect with our financial advisor."
-                      : "તમારી લોન જરૂરિયાત મુજબ કન્સલ્ટેશન બુક કરો અને અમારા ફાઇનાન્સિયલ એડવાઇઝર સાથે જોડાઓ."}
-                  </p>
-                </div>
+                <p className="text-[#E9D5FF] leading-7 mt-4">
+                  {language === "en" ? item.descEn : item.descGu}
+                </p>
               </div>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden md:flex items-center justify-center text-6xl font-black text-[#8E24AA]">
-              →
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative flex-1">
-              <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
-                <div className="bg-[#4F6BED] h-36 flex items-center justify-center">
-                  <h1 className="text-7xl font-black text-white">02</h1>
-                </div>
-
-                <div className="p-10 text-center flex flex-col flex-1">
-                  <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    {language === "en"
-                      ? "Expert Guidance"
-                      : "નિષ્ણાત માર્ગદર્શન"}
-                  </h3>
-
-                  <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    {language === "en"
-                      ? "Our expert team contacts you and shares a custom document checklist for your profile."
-                      : "અમારી નિષ્ણાત ટીમ તમને સંપર્ક કરે છે અને તમારા પ્રોફાઇલ માટે જરૂરી ડોક્યુમેન્ટ ચેકલિસ્ટ આપે છે."}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden md:flex items-center justify-center text-6xl font-black text-[#8E24AA]">
-              →
-            </div>
-
-            {/* Step 3 */}
-            <div className="relative flex-1">
-              <div className="bg-gradient-to-br from-[#2B0B3A] via-[#4B1363] to-[#5B0E74] rounded-[40px] overflow-hidden shadow-[0_20px_60px_rgba(91,14,116,0.15)] border border-[#7E22CE] hover:-translate-y-3 transition duration-300 h-full flex flex-col">
-                <div className="bg-[#5DBB9A] h-36 flex items-center justify-center">
-                  <h1 className="text-7xl font-black text-white">03</h1>
-                </div>
-
-                <div className="p-10 text-center flex flex-col flex-1">
-                  <h3 className="text-3xl font-extrabold text-white drop-shadow-[0_2px_5px_rgba(0,0,0,0.5)]">
-                    {language === "en" ? "Loan Process" : "લોન પ્રક્રિયા"}
-                  </h3>
-
-                  <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
-                    {language === "en"
-                      ? "Submit documents, choose your preferred bank and we handle the complete loan process."
-                      : "ડોક્યુમેન્ટ સબમિટ કરો, તમારી પસંદગીની બેંક પસંદ કરો અને અમે સંપૂર્ણ લોન પ્રક્રિયા સંભાળીએ છીએ."}
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
