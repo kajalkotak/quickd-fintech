@@ -301,21 +301,11 @@ Requirement: ${formData.message}
                   {language === "en" ? "Eligibility Check" : "પાત્રતા ચકાસણી"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Eligibility Check</p>
-                      <p>• Document Verification</p>
-                      <p>• Financial Institution Guidelines Check</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• પાત્રતા ચકાસણી</p>
-                      <p>• દસ્તાવેજ ચકાસણી</p>
-                      <p>• ફાઇનાન્સિયલ સંસ્થાની માર્ગદર્શિકા ચકાસણી</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "We will screen and analyze your financial documents to determine your loan eligibility, funding capacity, and the most suitable financing options available. Our recommendations are based on the lending guidelines of more than 40 leading banks and financial institutions."
+                    : "તમારા ફાઇનાન્સિયલ ડોક્યુમેન્ટ ને સ્ક્રીનિંગ કરી કેટલી લોન મળી શકે, કઈ લોન મળી શકે તેનું 40 થી વધારે ફાઇનાન્સિયલ ઇન્સ્ટિટ્યૂટ ની ગાઇડલાઇન પ્રમાણે આપને એડવાઈઝ મળશે."}
+                </p>
               </div>
             </div>
 
@@ -331,21 +321,11 @@ Requirement: ${formData.message}
                   {language === "en" ? "Expert Guidance" : "નિષ્ણાત માર્ગદર્શન"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• 15+ Years Experience</p>
-                      <p>• Financial Advisory Support</p>
-                      <p>• Best Funding Solutions</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• 15+ વર્ષનો અનુભવ</p>
-                      <p>• ફાઇનાન્સિયલ સલાહ</p>
-                      <p>• શ્રેષ્ઠ ફંડિંગ સોલ્યુશન</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "With over 15 years of experience in financial consulting, our team of expert advisors specializes in structuring funding solutions tailored to your business requirements and helping you achieve your financial goals efficiently."
+                    : "અમારી ટીમ  પાસે 15 વર્ષથી પણ વધારે સમયથી અનુભવ ધરાવતા ફાઇનાન્સિયલ એડવાઈઝર હોવાથી આપની ફાઇનાન્સ રિક્વાયરમેન્ટ ને સ્ટ્રક્ચર બેઝ ફંડિંગ દ્વારા રેઝોલ્વ કરવામાં એક્સપર્ટ છે."}
+                </p>
               </div>
             </div>
 
@@ -363,21 +343,11 @@ Requirement: ${formData.message}
                     : "સરકારી સબસિડી અને લાભ"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Government Schemes</p>
-                      <p>• Subsidy Eligibility</p>
-                      <p>• Benefits Guidance</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• સરકારી યોજનાઓ</p>
-                      <p>• સબસિડી પાત્રતા</p>
-                      <p>• લાભ માર્ગદર્શન</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "We provide complete guidance on various subsidy schemes offered by the Government of Gujarat and the Government of India, including eligibility assessment, documentation support, and end-to-end application processing."
+                    : "ગુજરાત સરકાર અને ભારત સરકાર તરફથી મળતી તમામ પ્રકારની સબસીડીનું સંપૂર્ણ માર્ગદર્શન, પાત્રતા અને પ્રોસેસ કરી આપવામાં આવશે."}
+                </p>
               </div>
             </div>
 
@@ -395,21 +365,11 @@ Requirement: ${formData.message}
                     : "બેંક ચાર્જિસ વિશ્લેષણ"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Bank Charges Analysis</p>
-                      <p>• Avoid Unnecessary Charges</p>
-                      <p>• Best Banking Options</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• બેંક ચાર્જિસ વિશ્લેષણ</p>
-                      <p>• બિનજરૂરી ચાર્જિસ ટાળો</p>
-                      <p>• શ્રેષ્ઠ બેંક વિકલ્પો</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "We help identify and eliminate unnecessary charges imposed by banks and financial institutions and assist in negotiating lower processing fees and other applicable charges wherever possible."
+                    : "બેન્ક /ફાઇનાન્સિયલ ઇન્સ્ટિટ્યુશન દ્વારા લગતા અનનેસેસરી ચાર્જીસ ને બાદ કરાવવા તેમજ ઓછા કરાવવામાં મદદરૂપ થઈશું."}
+                </p>
               </div>
             </div>
 
@@ -427,21 +387,11 @@ Requirement: ${formData.message}
                     : "કોલેટરલ ફ્રી લોન"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• CGTMSE Scheme</p>
-                      <p>• Collateral Free Loan</p>
-                      <p>• Funding Options</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• CGTMSE યોજના</p>
-                      <p>• કોલેટરલ ફ્રી લોન</p>
-                      <p>• ફંડિંગ વિકલ્પો</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Under the CGTMSE Scheme of the Government of India, we can assist eligible businesses in obtaining collateral-free funding up to ₹10 Crore, without the need to mortgage any property or provide additional security."
+                    : "ભારત સરકારની ચાલતી CGTMSE Scheme અંતર્ગત 10 કરોડ રૂપિયા સુધીનું અનસિક્યોર્ડ ફંડિંગ કોઈપણ જાતની પ્રોપર્ટી આપ્યા વિના કરી આપવામાં આવશે."}
+                </p>
               </div>
             </div>
 
@@ -457,21 +407,11 @@ Requirement: ${formData.message}
                   {language === "en" ? "Zero Advance Fees" : "શૂન્ય એડવાન્સ ફી"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Zero Advance Fees</p>
-                      <p>• Transparent Process</p>
-                      <p>• No Hidden Charges</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• શૂન્ય એડવાન્સ ફી</p>
-                      <p>• પારદર્શક પ્રક્રિયા</p>
-                      <p>• કોઈ છુપાયેલા ચાર્જિસ નહીં</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "We believe in transparency. Therefore, no advance fees, registration charges, or upfront payments are collected from our clients before the commencement of services."
+                    : "અમારા ત્યાં કોઈપણ જાતની એડવાન્સ ફી કે ચાર્જીસ લેવામાં આવતો નથી. "}
+                </p>
               </div>
             </div>
 
@@ -487,21 +427,11 @@ Requirement: ${formData.message}
                   {language === "en" ? "Lower Interest Rate" : "ઓછો વ્યાજ દર"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Lower Interest Rate</p>
-                      <p>• Best ROI Options</p>
-                      <p>• Bank Comparison Support</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• ઓછો વ્યાજ દર</p>
-                      <p>• શ્રેષ્ઠ ROI વિકલ્પો</p>
-                      <p>• બેંક તુલના સહાય</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Under the Lower Rate of Interest service, our team analyzes the applicant’s profile and CIBIL record to help secure loan facilities at the most competitive interest rates from banks and financial institutions."
+                    : "Lower Rate of Interest અંતર્ગત અમારી ટીમ દ્વારા Analysis કરી CIBIL તેમજ Applicant Profile અનુસાર બેંક / Financial Institution તરફથી ઓછા વ્યાજદરે લોન સુવિધા મેળવવામાં માર્ગદર્શન આપવામાં આવે છે."}
+                </p>
               </div>
             </div>
 
@@ -519,21 +449,11 @@ Requirement: ${formData.message}
                     : "લોન પ્રોસેસિંગ સપોર્ટ"}
                 </h3>
 
-                <div className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1 text-left">
-                  {language === "en" ? (
-                    <>
-                      <p>• Documentation Support</p>
-                      <p>• Bank Follow-up</p>
-                      <p>• Final Approval Assistance</p>
-                    </>
-                  ) : (
-                    <>
-                      <p>• દસ્તાવેજ પ્રક્રિયા</p>
-                      <p>• બેંક ફોલોઅપ</p>
-                      <p>• અંતિમ મંજૂરી સુધી સહાય</p>
-                    </>
-                  )}
-                </div>
+                <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
+                  {language === "en"
+                    ? "Under Loan Processing Support, we provide complete assistance for document verification, bank coordination, file processing and support until final loan approval."
+                    : "Loan Processing Support અંતર્ગત દસ્તાવેજોની ચકાસણી, બેંક સાથે અનુસંધાન, ફાઈલ પ્રોસેસિંગ તથા અંતિમ મંજૂરી સુધી સંપૂર્ણ માર્ગદર્શન અને સહાય પૂરી પાડવામાં આવે છે."}
+                </p>
               </div>
             </div>
           </div>
