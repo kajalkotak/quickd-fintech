@@ -298,7 +298,9 @@ Requirement: ${formData.message}
 
               <div className="p-10 text-center flex flex-col flex-1">
                 <h3 className="text-3xl font-extrabold text-white">
-                  {language === "en" ? "Eligibility Check" : "પાત્રતા ચકાસણી"}
+                  {language === "en"
+                    ? "Eligibility Check"
+                    : "Eligibility Check"}
                 </h3>
 
                 <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
@@ -318,7 +320,9 @@ Requirement: ${formData.message}
 
               <div className="p-10 text-center flex flex-col flex-1">
                 <h3 className="text-3xl font-extrabold text-white">
-                  {language === "en" ? "Expert Guidance" : "નિષ્ણાત માર્ગદર્શન"}
+                  {language === "en"
+                    ? "Expert Guidance"
+                    : "નિષ્ણાંત માર્ગદર્શન"}
                 </h3>
 
                 <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
@@ -404,7 +408,7 @@ Requirement: ${formData.message}
 
               <div className="p-10 text-center flex flex-col flex-1">
                 <h3 className="text-3xl font-extrabold text-white">
-                  {language === "en" ? "Zero Advance Fees" : "શૂન્ય એડવાન્સ ફી"}
+                  {language === "en" ? "Zero Advance Fees" : "ઝીરો એડવાન્સ ફી"}
                 </h3>
 
                 <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
@@ -429,8 +433,8 @@ Requirement: ${formData.message}
 
                 <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
                   {language === "en"
-                    ? "Under the Lower Rate of Interest service, our team analyzes the applicant’s profile and CIBIL record to help secure loan facilities at the most competitive interest rates from banks and financial institutions."
-                    : "Lower Rate of Interest અંતર્ગત અમારી ટીમ દ્વારા Analysis કરી CIBIL તેમજ Applicant Profile અનુસાર બેંક / Financial Institution તરફથી ઓછા વ્યાજદરે લોન સુવિધા મેળવવામાં માર્ગદર્શન આપવામાં આવે છે."}
+                    ? "After a thorough analysis of your financial documents and business profile, our team of experts will assist you in securing the most suitable funding solutions at competitive and lower interest rates, helping reduce your overall borrowing cost and improve financial efficiency."
+                    : "આપના તમામ ડોક્યુમેન્ટનું એનાલિસિસ કાર્ય બાદ અમારી એક્સપર્ટ ટીમ દ્વારા ઓછા વ્યાજ દરે લોન સુવિધા પુરી પાડવામાં આવશે."}
                 </p>
               </div>
             </div>
@@ -452,7 +456,7 @@ Requirement: ${formData.message}
                 <p className="text-[#E9D5FF] leading-8 mt-6 text-lg flex-1">
                   {language === "en"
                     ? "Under Loan Processing Support, we provide complete assistance for document verification, bank coordination, file processing and support until final loan approval."
-                    : "Loan Processing Support અંતર્ગત દસ્તાવેજોની ચકાસણી, બેંક સાથે અનુસંધાન, ફાઈલ પ્રોસેસિંગ તથા અંતિમ મંજૂરી સુધી સંપૂર્ણ માર્ગદર્શન અને સહાય પૂરી પાડવામાં આવે છે."}
+                    : "Loan Processing Support અંતર્ગત દસ્તાવેજોની ચકાસણી,  Bank Coordination, ફાઈલ પ્રોસેસિંગ તથા અંતિમ મંજૂરી સુધી સંપૂર્ણ માર્ગદર્શન અને સહાય પૂરી પાડવામાં આવે છે."}
                 </p>
               </div>
             </div>
